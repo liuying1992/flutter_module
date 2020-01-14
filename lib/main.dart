@@ -1,9 +1,20 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_module/routerMap.dart';
 
-void main() => runApp(routerMap(window.defaultRouteName));
+//void main() => runApp(routerMap(window.defaultRouteName));
+
+void main() => runApp(new MaterialApp(
+      routes: <String, WidgetBuilder>{
+        'homePage': (BuildContext context) => new MyHomePage(
+              title: 'homePage',
+            ),
+        'indexPage': (BuildContext context) => new MyHomePage(
+              title: 'indexPage',
+            ),
+      },
+      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+    ));
 
 Widget _withRouter(String router) {
   switch (router) {
