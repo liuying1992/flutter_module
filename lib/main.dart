@@ -1,6 +1,32 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(_withRouter(window.defaultRouteName));
+
+Widget _withRouter(String router) {
+  switch (router) {
+    case 'homePage':
+      return MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: new Text('homePage'),
+            centerTitle: true,
+          ),
+          body: Center(
+            child: Text('Flutter page from native  router = $router'),
+          ),
+        ),
+      );
+    default:
+      return Center(
+        child: Text(
+          'no RouterPath  $router',
+          textDirection: TextDirection.ltr,
+        ),
+      );
+  }
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
