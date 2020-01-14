@@ -17,6 +17,7 @@ class _RouterAppPageState extends State<HomePage> {
           new Image(
             image: new AssetImage('images/lake.jpg'),
             height: 200,
+            width: 500,
           ),
           new Text('title'),
         ],
