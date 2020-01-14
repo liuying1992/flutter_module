@@ -12,14 +12,14 @@ class _RouterAppPageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('HomePage'),
-          centerTitle: true,
-        ),
-        body: new Center(
-          child: new Text('TextView '),
-        ),
+      home: new Column(
+        children: <Widget>[
+          new Image(
+            image: new AssetImage('images/lake.jpg'),
+            height: 200,
+          ),
+          new Text('title'),
+        ],
       ),
     );
   }
