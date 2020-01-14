@@ -1,8 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_module/routerMap.dart';
 
-void main() => runApp(_withRouter(window.defaultRouteName));
+void main() => runApp(routerMap(window.defaultRouteName));
 
 Widget _withRouter(String router) {
   switch (router) {
