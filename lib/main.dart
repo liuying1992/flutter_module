@@ -1,14 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_module/home/homePage.dart';
 
 //void main() => runApp(routerMap(window.defaultRouteName));
 
 void main() => runApp(new MaterialApp(
       routes: <String, WidgetBuilder>{
-        'homePage': (BuildContext context) => new MyHomePage(
-              title: 'homePage',
-            ),
+        'homePage': (BuildContext context) => new HomePage(),
         'indexPage': (BuildContext context) => new MyHomePage(
               title: 'indexPage',
             ),
